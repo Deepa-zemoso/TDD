@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BusDriversTest {
+public class GossipingBusDriversTest {
     @Test
     public void testDriverNeverGossips() {
         int[][] driverRoutes = {
@@ -13,7 +13,6 @@ public class BusDriversTest {
         int expectedOutput = -1;
         assertEquals(expectedOutput, BusDrivers.getStopsForSharingAllGossips(driverRoutes));
     }
-
     @Test
     public void testTwoDriversSameRoute() {
         int[][] driverRoutes = {
@@ -23,7 +22,6 @@ public class BusDriversTest {
         int expectedOutput = 3;
         assertEquals(expectedOutput, BusDrivers.getStopsForSharingAllGossips(driverRoutes));
     }
-
     @Test
     public void testMultipleDriversDifferentRoutes() {
         int[][] driverRoutes = {
